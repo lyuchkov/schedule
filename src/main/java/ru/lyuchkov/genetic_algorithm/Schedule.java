@@ -3,7 +3,6 @@ package ru.lyuchkov.genetic_algorithm;
 import ru.lyuchkov.entity.Discipline;
 import ru.lyuchkov.entity.Group;
 import ru.lyuchkov.entity.Session;
-import ru.lyuchkov.infostructure.annotations.InjectByType;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,25 +12,32 @@ import java.util.Random;
 public class Schedule extends Chromosome<Schedule>{
     private List<Session> list;
 
-    @InjectByType
     private Data data;
-
 
     private static Random random = new Random();
 
     public Schedule() {
         random = new Random();
     }
-
+    /*
     public Schedule(List<Session> list) {
         this.list = list;
         random = new Random();
-        Data.init();
+    }*/
+
+    public Schedule(Data data) {
+        this.data = data;
+        random = new Random();
     }
 
+    public Schedule(List<Session> list, Data data) {
+        this.list = list;
+        this.data = data;
+    }
 
     public Schedule randomInstance() {
        List<Session> tempList = new ArrayList<>();
+       //todo NullPointerCheck
         for (Group group : data.getGroups()) {
             for (Discipline discipline : group.getDisciplines()) {
                 Session session = new Session(group, discipline);
@@ -41,7 +47,7 @@ public class Schedule extends Chromosome<Schedule>{
                 tempList.add(session);
             }
         }
-        return new Schedule(tempList);
+        return new Schedule(tempList,data);
     }
 
     @Override
@@ -66,8 +72,8 @@ public class Schedule extends Chromosome<Schedule>{
 
     @Override
     public List<Schedule> crossover(Schedule other) {
-        Schedule child1 = new Schedule(new ArrayList<>(list));
-        Schedule child2 = new Schedule(new ArrayList<>(list));
+        Schedule child1 = new Schedule(new ArrayList<>(list),data);
+        Schedule child2 = new Schedule(new ArrayList<>(list),data);
         int indx1 = random.nextInt(list.size());
         int indx2 = random.nextInt(list.size());
         Session s1 = list. get(indx1);
@@ -88,7 +94,7 @@ public class Schedule extends Chromosome<Schedule>{
 
     @Override
     public Schedule copy() {
-        return new Schedule(new ArrayList<>(list));
+        return new Schedule(new ArrayList<>(list),data);
     }
 
     @Override
@@ -101,5 +107,9 @@ public class Schedule extends Chromosome<Schedule>{
         }
         builder.append("Number of conflicts: ").append(numberOfConflicts());
         return builder.toString();
+    }
+
+    public List<Session> getList() {
+        return list;
     }
 }

@@ -45,25 +45,20 @@ public class GeneticAlgorithm<C extends Chromosome<C>> {
         return picks;
     }
 
-    // Pick a certain number of individuals via a tournament
+
     private List<C> pickTournament(int numParticipants, int numPicks) {
-        // Find numParticipants random participants to be in the tournament
         Collections.shuffle(population);
         List<C> tournament = population.subList(0, numParticipants);
-        // Find the numPicks highest fitnesses in the tournament
         Collections.sort(tournament, Collections.reverseOrder());
         return tournament.subList(0, numPicks);
     }
 
-    // Replace the population with a new generation of individuals
+
     private void reproduceAndReplace() {
         ArrayList<C> nextPopulation = new ArrayList<>();
-        // keep going until we've filled the new generation
         while (nextPopulation.size() < population.size()) {
-            // pick the two parents
             List<C> parents;
             if (selectionType == SelectionType.ROULETTE) {
-                // create the probability distribution wheel
                 double totalFitness = population.stream()
                         .mapToDouble(C::fitness).sum();
                 double[] wheel = population.stream()
@@ -71,27 +66,24 @@ public class GeneticAlgorithm<C extends Chromosome<C>> {
                                 / totalFitness)
                         .toArray();
                 parents = pickRoulette(wheel, 2);
-            } else { // tournament
+            } else {
                 parents = pickTournament(population.size() / 2, 2);
             }
-            // potentially crossover the 2 parents
             if (random.nextDouble() < crossoverChance) {
                 C parent1 = parents.get(0);
                 C parent2 = parents.get(1);
                 nextPopulation.addAll(parent1.crossover(parent2));
-            } else { // just add the two parents
+            } else {
                 nextPopulation.addAll(parents);
             }
         }
-        // if we have an odd number, we'll have 1 exra, so we remove it
         if (nextPopulation.size() > population.size()) {
             nextPopulation.remove(0);
         }
-        // replace the reference/generation
         population = nextPopulation;
     }
 
-    // With mutationChance probability, mutate each individual
+
     private void mutate() {
         for (C individual : population) {
             if (random.nextDouble() < mutationChance) {
@@ -100,16 +92,12 @@ public class GeneticAlgorithm<C extends Chromosome<C>> {
         }
     }
 
-    // Run the genetic algorithm for maxGenerations iterations
-    // and return the best individual found
     public C run(int maxGenerations, double threshold) {
         C best = Collections.max(population).copy();
         for (int generation = 0; generation < maxGenerations; generation++) {
-            // early exit if we beat threshold
             if (best.fitness() >= threshold) {
                 return best;
             }
-            // Debug printout
             System.out.println("Generation " + generation +
                     " Best " + best.fitness() +
                     " Avg " + population.stream()

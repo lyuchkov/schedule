@@ -9,8 +9,9 @@ import ru.lyuchkov.infostructure.config.Config;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+
 public class ApplicationContext {
-    @Setter
+     @Setter
     private ObjectFactory factory;
     private Map<Class, Object> cache = new ConcurrentHashMap<>();
     @Getter

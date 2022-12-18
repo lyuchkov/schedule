@@ -5,6 +5,7 @@ import ru.lyuchkov.entity.Discipline;
 import ru.lyuchkov.infostructure.annotations.InjectByType;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Singleton
@@ -27,5 +28,9 @@ public class DisciplineService {
 
     public List<Discipline> findAllWithNames(List<String> names) {
         return disciplineContainer.findAllWithNames(names);
+    }
+
+    public List<Discipline> getALl() {
+        return new ArrayList<>(disciplineContainer.getAll());
     }
 }

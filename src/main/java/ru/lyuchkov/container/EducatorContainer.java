@@ -1,7 +1,6 @@
 package ru.lyuchkov.container;
 
 import ru.lyuchkov.entity.Educator;
-import ru.lyuchkov.entity.Room;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
 import java.util.*;

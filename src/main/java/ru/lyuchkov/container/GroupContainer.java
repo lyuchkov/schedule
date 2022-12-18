@@ -1,9 +1,10 @@
 package ru.lyuchkov.container;
 
 import ru.lyuchkov.entity.Group;
-import ru.lyuchkov.entity.Room;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -41,5 +42,9 @@ public class GroupContainer implements Container<Group> {
             if (g.getName().equals(s))return true;
         }
         return false;
+    }
+
+    public List<Group> getAll() {
+        return new ArrayList<>(map.values());
     }
 }

@@ -2,7 +2,6 @@ package ru.lyuchkov.service;
 
 import ru.lyuchkov.container.EducatorContainer;
 import ru.lyuchkov.entity.Educator;
-import ru.lyuchkov.entity.Room;
 import ru.lyuchkov.infostructure.annotations.InjectByType;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 

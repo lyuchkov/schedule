@@ -26,4 +26,15 @@ public class GroupService {
         groupContainer.add(group);
         return true;
     }
+    public Group findById(int id){
+        return groupContainer.findById(id);
+    }
+    public List<Group> getAll(){
+        return groupContainer.getAll();
+    }
+
+    public boolean delete(int id){
+        //todo find instance in data class and return if it used
+        return false;
+    }
 }

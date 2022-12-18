@@ -1,7 +1,6 @@
 package ru.lyuchkov.container;
 
 import ru.lyuchkov.entity.Discipline;
-import ru.lyuchkov.entity.Educator;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
 import java.util.*;
@@ -43,5 +42,9 @@ public class DisciplineContainer implements Container<Discipline> {
             if (nameSet.contains(d.getName()))res.add(d);
         }
         return res;
+    }
+
+    public List<Discipline> getAll() {
+        return new ArrayList<>(map.values());
     }
 }
