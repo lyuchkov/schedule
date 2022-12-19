@@ -1,15 +1,18 @@
 package ru.lyuchkov.entity;
 
+import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Educator{
+public class Educator {
     private static final AtomicInteger count = new AtomicInteger(0);
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
+    private final String exportName;
 
     public Educator(String name) {
         this.id = count.incrementAndGet();
-        this.name = name;
+        this.name = id+ "   "+name;
+        exportName = name;
     }
 
     public int getId() {
@@ -23,5 +26,9 @@ public class Educator{
     @Override
     public String toString() {
         return name;
+    }
+
+    public String getExportName() {
+        return exportName;
     }
 }

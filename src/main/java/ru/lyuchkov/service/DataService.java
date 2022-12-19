@@ -1,8 +1,11 @@
 package ru.lyuchkov.service;
 
+import ru.lyuchkov.entity.Discipline;
 import ru.lyuchkov.genetic_algorithm.Data;
 import ru.lyuchkov.infostructure.annotations.InjectByType;
 import ru.lyuchkov.infostructure.annotations.Singleton;
+
+import java.util.List;
 
 @Singleton
 public class DataService {
@@ -23,7 +26,7 @@ public class DataService {
 
 
     public void updateData() {
-        data.update(disciplineService.getALl(),
+        data.update(disciplineService.getAll(),
                 roomService.getAll(),
                 groupService.getAll(),
                 educatorService.getAll());

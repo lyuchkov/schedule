@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.lyuchkov.genetic_algorithm.Data;
 import ru.lyuchkov.infostructure.Application;
@@ -33,6 +34,7 @@ public class MainTest {
         EducatorService educatorService = context.getObject(EducatorService.class);
         GroupService groupService = context.getObject(GroupService.class);
         RoomService roomService = context.getObject(RoomService.class);
+        SerializationService serializationService = context.getObject(SerializationService.class);
 
 
         roomService.add("1101");
@@ -60,6 +62,6 @@ public class MainTest {
 
         scheduleService.generate();
 
-        scheduleService.toString();
+        serializationService.createExcelTable();
     }
 }

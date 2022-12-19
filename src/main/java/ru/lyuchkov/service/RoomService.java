@@ -29,8 +29,5 @@ public class RoomService {
         return roomContainer.getAll();
    }
 
-   public boolean delete(int id){
-        //todo find instance in data class and return if it used
-       return false;
-   }
+
 }

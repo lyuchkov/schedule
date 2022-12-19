@@ -3,6 +3,7 @@ package ru.lyuchkov.container;
 import ru.lyuchkov.entity.Discipline;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -46,5 +47,13 @@ public class DisciplineContainer implements Container<Discipline> {
 
     public List<Discipline> getAll() {
         return new ArrayList<>(map.values());
+    }
+
+    public boolean containsWithName(String courseName) {
+        for (Discipline d:
+                map.values()) {
+            if (Objects.equals(d.getName(), courseName))return true;
+        }
+        return false;
     }
 }

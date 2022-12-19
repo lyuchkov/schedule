@@ -1,8 +1,9 @@
 package ru.lyuchkov.entity;
 
+import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Session {
+public class Session{
     private static final AtomicInteger count = new AtomicInteger(0);
     private int id;
     private Group group;

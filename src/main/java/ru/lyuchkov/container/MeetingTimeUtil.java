@@ -2,6 +2,7 @@ package ru.lyuchkov.container;
 
 import ru.lyuchkov.entity.MeetingTime;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

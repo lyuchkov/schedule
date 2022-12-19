@@ -1,5 +1,6 @@
 package ru.lyuchkov.entity;
 
+import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Room {
@@ -18,4 +19,5 @@ public class Room {
     public String getName() {
         return name;
     }
+
 }

@@ -3,12 +3,13 @@ package ru.lyuchkov.container;
 import ru.lyuchkov.entity.Educator;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Singleton
 public class EducatorContainer implements Container<Educator> {
-    private Map<Integer, Educator> map;
+    private final Map<Integer, Educator> map;
 
     public EducatorContainer() {
         map = new ConcurrentHashMap<>();

@@ -22,28 +22,26 @@ public class ScheduleService {
     DataService dataService;
 
 
-    public boolean generate(){
-            dataService.updateData();
-            if(dataService.checkForEmptyDataFields())return false;
-            Schedule schedule = new Schedule(dataService.getData());
-            List<Schedule> initialPopulation = new ArrayList<>();
-            for (int i = 0; i < POPULATION_SIZE; i++) {
-                initialPopulation.add(schedule.randomInstance());
-            }
-            GeneticAlgorithm<Schedule> ga = new GeneticAlgorithm<Schedule>(initialPopulation, 0.2, 0.7, GeneticAlgorithm.SelectionType.TOURNAMENT);
-            Schedule result = ga.run(GENERATIONS, THRESHOLD);
+    public boolean generate() {
+        dataService.updateData();
+        if (dataService.checkForEmptyDataFields()) return false;
+        Schedule schedule = new Schedule(dataService.getData());
+        List<Schedule> initialPopulation = new ArrayList<>();
+        for (int i = 0; i < POPULATION_SIZE; i++) {
+            initialPopulation.add(schedule.randomInstance());
+        }
+        GeneticAlgorithm<Schedule> ga = new GeneticAlgorithm<Schedule>(initialPopulation, 0.2, 0.7, GeneticAlgorithm.SelectionType.TOURNAMENT);
+        Schedule result = ga.run(GENERATIONS, THRESHOLD);
 
-            repository.setCurrentState(result.getList());
-            if(result.fitness()!=1) {
-                return false;
-            };
-            //todo remove
-        /*
-        List<Session> list = result.getList();
-        for (Session s:
-             list) {
-            System.out.println(s.getEducator().getName()+" "+s.getRoom().getName()+" "+s.getGroup().getName()+" "+s.getDiscipline().getName()+" "+s.getTime());
-        }*/
-        return true;
+        repository.setCurrentState(result.getList());
+        return result.fitness() == 1;
+    }
+
+    public ScheduleRepository getRepository() {
+        return repository;
+    }
+
+    public void setRepository(ScheduleRepository repository) {
+        this.repository = repository;
     }
 }

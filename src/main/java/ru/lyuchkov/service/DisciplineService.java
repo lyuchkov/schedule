@@ -20,6 +20,7 @@ public class DisciplineService {
 
     public boolean add(String courseName, List<String> educatorList){
         if(courseName.isEmpty()|| educatorList.isEmpty()) return false;
+        if(disciplineContainer.containsWithName(courseName)) return false;
         Discipline discipline = new Discipline(courseName,
                 educatorService.findAllWithNames(educatorList));
         disciplineContainer.add(discipline);
@@ -30,7 +31,11 @@ public class DisciplineService {
         return disciplineContainer.findAllWithNames(names);
     }
 
-    public List<Discipline> getALl() {
+    public List<Discipline> getAll() {
         return new ArrayList<>(disciplineContainer.getAll());
+    }
+
+    public boolean delete(int id){
+        return false;
     }
 }

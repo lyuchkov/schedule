@@ -1,9 +1,10 @@
 package ru.lyuchkov.entity;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Discipline {
+public class Discipline  {
     private static final AtomicInteger count = new AtomicInteger(0);
     private int id;
     private String name;

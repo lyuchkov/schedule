@@ -37,7 +37,6 @@ public class Schedule extends Chromosome<Schedule>{
 
     public Schedule randomInstance() {
        List<Session> tempList = new ArrayList<>();
-       //todo NullPointerCheck
         for (Group group : data.getGroups()) {
             for (Discipline discipline : group.getDisciplines()) {
                 Session session = new Session(group, discipline);

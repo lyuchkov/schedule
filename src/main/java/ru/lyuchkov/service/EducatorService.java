@@ -31,9 +31,4 @@ public class EducatorService {
     public List<Educator> getAll(){
         return educatorContainer.getAll();
     }
-
-    public boolean delete(int id){
-        //todo find instance in data class and return if it used
-        return false;
-    }
 }

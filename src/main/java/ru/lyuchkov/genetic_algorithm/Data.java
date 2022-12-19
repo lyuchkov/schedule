@@ -5,10 +5,11 @@ import ru.lyuchkov.container.MeetingTimeUtil;
 import ru.lyuchkov.entity.*;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Singleton
-public class Data {
+public class Data{
     private List<Discipline> disciplines;
     private List<Room> rooms;
     private List<Group> groups;

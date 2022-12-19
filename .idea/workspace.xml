@@ -5,23 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6fa36d3-26f8-4883-aadd-b4db49716a20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/ScheduleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/DataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/SerializationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/DisciplineContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/DisciplineContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/EducatorContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/EducatorContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/GroupContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/GroupContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/MeetingTimeUtilContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/MeetingTimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/MeetingTimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/MeetingTimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/RoomContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/RoomContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/ScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/ScheduleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/SessionContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/container/SessionContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Discipline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Educator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Educator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/MeetingTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/MeetingTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/entity/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/genetic_algorithm/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/genetic_algorithm/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/genetic_algorithm/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/genetic_algorithm/GeneticAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/genetic_algorithm/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/genetic_algorithm/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/infostructure/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/infostructure/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/DataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/DisciplineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/DisciplineService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/EducatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/EducatorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/GroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="15a289598f64f629ea5482d8ca8bdff40e05af26" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -128,9 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MainTest.addDataAndGenerateSchedule" />
+        <item itemvalue="JUnit.MainTest.test" />
         <item itemvalue="JUnit.MainTest.checkNull" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainTest.test" />
+        <item itemvalue="JUnit.MainTest.addDataAndGenerateSchedule" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +171,8 @@
       <updated>1671178045822</updated>
       <workItem from="1671178047207" duration="13741000" />
       <workItem from="1671347499076" duration="886000" />
-      <workItem from="1671373902718" duration="9001000" />
+      <workItem from="1671373902718" duration="11412000" />
+      <workItem from="1671440168174" duration="9625000" />
     </task>
     <task id="LOCAL-00001" summary="containers and services were added">
       <created>1671220360615</created>
@@ -153,34 +181,52 @@
       <option name="project" value="LOCAL" />
       <updated>1671220360615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic functionality">
+      <created>1671395061813</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671395061813</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="containers and services were added" />
-    <option name="LAST_COMMIT_MESSAGE" value="containers and services were added" />
+    <MESSAGE value="basic functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/lyuchkov/service/ScheduleService.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/MainTest.java</url>
-          <line>15</line>
+          <line>16</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/MainTest.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/lyuchkov/infostructure/ApplicationContext.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="22" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

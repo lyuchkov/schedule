@@ -3,11 +3,12 @@ package ru.lyuchkov.container;
 import ru.lyuchkov.entity.Session;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Singleton
-public class SessionContainer implements Container<Session> {
+public class SessionContainer implements Container<Session>{
     private Map<Integer, Session> map;
 
     public SessionContainer() {
@@ -34,5 +35,5 @@ public class SessionContainer implements Container<Session> {
         map.put(t.getId(), t);
     }
 
-    //todo getAllBy...something
+
 }

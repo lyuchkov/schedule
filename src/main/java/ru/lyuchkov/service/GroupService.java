@@ -1,6 +1,7 @@
 package ru.lyuchkov.service;
 
 import ru.lyuchkov.container.GroupContainer;
+import ru.lyuchkov.entity.Discipline;
 import ru.lyuchkov.entity.Group;
 import ru.lyuchkov.infostructure.annotations.InjectByType;
 import ru.lyuchkov.infostructure.annotations.Singleton;
@@ -13,6 +14,7 @@ public class GroupService {
     GroupContainer groupContainer;
     @InjectByType
     DisciplineService disciplineService;
+
 
     public GroupService() {
     }
@@ -34,7 +36,17 @@ public class GroupService {
     }
 
     public boolean delete(int id){
-        //todo find instance in data class and return if it used
-        return false;
+        try {
+            groupContainer.delete(id);
+            return true;
+        }catch (Exception e){ return false;}
+    }
+
+    public void setDisciplineListById(int id, List<Discipline> d){
+        Group byId = groupContainer.findById(id);
+        byId.setDisciplines(d);
+    }
+    public List<Discipline> getDisciplineListById(int id){
+        return groupContainer.findById(id).getDisciplines();
     }
 }

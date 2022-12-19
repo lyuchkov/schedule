@@ -1,10 +1,11 @@
 package ru.lyuchkov.entity;
 
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Group{
+public class Group  {
     private static final AtomicInteger count = new AtomicInteger(0);
     private int id;
     private String name;
@@ -26,5 +27,9 @@ public class Group{
 
     public List<Discipline> getDisciplines() {
         return disciplines;
+    }
+
+    public void setDisciplines(List<Discipline> disciplines) {
+        this.disciplines = disciplines;
     }
 }

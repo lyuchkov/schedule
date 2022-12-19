@@ -3,6 +3,7 @@ package ru.lyuchkov.container;
 import ru.lyuchkov.entity.Room;
 import ru.lyuchkov.infostructure.annotations.Singleton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
