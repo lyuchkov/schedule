@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.lyuchkov.genetic_algorithm.Data;
 import ru.lyuchkov.infostructure.Application;
@@ -46,18 +45,18 @@ public class MainTest {
         educatorService.add("Анатолий Анатольевич");
         educatorService.add("Ольга Владимировна");
 
-        disciplineService.add("Математический анализ",
+        disciplineService.addByName("Математический анализ",
                 new ArrayList<>(List.of("Анатолий Павлович", "Анатолий Анатольевич")));
-        disciplineService.add("Физика",
+        disciplineService.addByName("Физика",
                 new ArrayList<>(List.of("Анатолий Павлович")));
-        disciplineService.add( "Объектно-ориентированное программирование",
+        disciplineService.addByName( "Объектно-ориентированное программирование",
                 new ArrayList<>(List.of("Анатолий Анатольевич","Ольга Владимировна")));
 
-        groupService.add( "M011",
+        groupService.addByName( "M011",
                 new ArrayList<>(List.of("Математический анализ", "Физика","Объектно-ориентированное программирование")));
-        groupService.add( "1301",
+        groupService.addByName( "1301",
                 new ArrayList<>(List.of("Математический анализ", "Физика")));
-        groupService.add( "1302",
+        groupService.addByName( "1302",
                 new ArrayList<>(List.of("Математический анализ", "Физика","Объектно-ориентированное программирование")));
 
         scheduleService.generate();

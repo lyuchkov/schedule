@@ -1,6 +1,9 @@
 package ru.lyuchkov.service;
 
 import ru.lyuchkov.container.ScheduleRepository;
+import ru.lyuchkov.entity.Educator;
+import ru.lyuchkov.entity.Group;
+import ru.lyuchkov.entity.Session;
 import ru.lyuchkov.genetic_algorithm.GeneticAlgorithm;
 import ru.lyuchkov.genetic_algorithm.Schedule;
 import ru.lyuchkov.infostructure.annotations.InjectByType;
@@ -43,5 +46,13 @@ public class ScheduleService {
 
     public void setRepository(ScheduleRepository repository) {
         this.repository = repository;
+    }
+
+    public List<Session> getAllByGroup(Group selectedItem) {
+        return repository.getAllByGroup(selectedItem);
+    }
+
+    public List<Session> getAllByEducator(Educator selectedItem) {
+        return repository.getAllByEducator(selectedItem);
     }
 }

@@ -32,4 +32,9 @@ public class Group  {
     public void setDisciplines(List<Discipline> disciplines) {
         this.disciplines = disciplines;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

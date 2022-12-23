@@ -12,6 +12,7 @@ import java.util.List;
 public class GroupService {
     @InjectByType
     GroupContainer groupContainer;
+
     @InjectByType
     DisciplineService disciplineService;
 
@@ -19,12 +20,21 @@ public class GroupService {
     public GroupService() {
     }
 
-    public boolean add(String groupName, List<String> disciplinesList){
+    public boolean addByName(String groupName, List<String> disciplinesList){
         if(groupContainer.containsGroupWithName(groupName) ||
                 groupName.isEmpty()||
                 disciplinesList.isEmpty())return false;
         Group group = new Group(groupName,
                 disciplineService.findAllWithNames(disciplinesList));
+        groupContainer.add(group);
+        return true;
+    }
+    public boolean add(String groupName, List<Discipline> disciplinesList){
+        if(groupContainer.containsGroupWithName(groupName) ||
+                groupName.isEmpty()||
+                disciplinesList.isEmpty())return false;
+        Group group = new Group(groupName,
+                disciplinesList);
         groupContainer.add(group);
         return true;
     }

@@ -1,5 +1,7 @@
 package ru.lyuchkov.container;
 
+import ru.lyuchkov.entity.Educator;
+import ru.lyuchkov.entity.Group;
 import ru.lyuchkov.entity.Session;
 import ru.lyuchkov.genetic_algorithm.Data;
 import ru.lyuchkov.infostructure.annotations.InjectByType;
@@ -23,5 +25,23 @@ public class ScheduleRepository {
 
     public List<Session> getCurrentState() {
         return currentState;
+    }
+
+    public List<Session> getAllByGroup(Group g) {
+        List<Session> res = new ArrayList<>();
+        for (Session s:
+             currentState) {
+            if(s.getGroup()==g) res.add(s);
+        }
+        return res;
+    }
+
+    public List<Session> getAllByEducator(Educator e) {
+        List<Session> res = new ArrayList<>();
+        for (Session s:
+                currentState) {
+            if(s.getEducator()==e) res.add(s);
+        }
+        return res;
     }
 }

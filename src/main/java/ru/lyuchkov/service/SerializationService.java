@@ -20,10 +20,10 @@ public class SerializationService {
     @InjectByType
     ScheduleService scheduleService;
 
+    final String filename = "src/main/resources/output/table.xls";
 
-    public void createExcelTable(){
+    public boolean createExcelTable(){
         try {
-        String filename = "src/main/resources/output/table.xls";
         HSSFWorkbook workbook = new HSSFWorkbook();
 
         List<Session> list = scheduleService.getRepository().getCurrentState();
@@ -36,7 +36,7 @@ public class SerializationService {
         rowhead.createCell(3).setCellValue("Аудитория");
         rowhead.createCell(4).setCellValue("Время");
 
-        List<HSSFRow> rows = new ArrayList<>();
+
         int num = 1;
         for (Session s:
              list) {
@@ -52,8 +52,10 @@ public class SerializationService {
         workbook.write(fos);
         fos.close();
         workbook.close();
+        return true;
         }catch (Exception e){
             e.printStackTrace();
+            return false;
         }
     }
 }

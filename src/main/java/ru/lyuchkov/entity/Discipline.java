@@ -1,14 +1,13 @@
 package ru.lyuchkov.entity;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Discipline  {
+public class Discipline {
     private static final AtomicInteger count = new AtomicInteger(0);
-    private int id;
-    private String name;
-    private List<Educator> educatorList;
+    private final int id;
+    private final String name;
+    private final List<Educator> educatorList;
 
     public Discipline(String name, List<Educator> educatorList) {
         this.id = count.incrementAndGet();
